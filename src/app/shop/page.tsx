@@ -1,5 +1,9 @@
 import OurProductCard from "@/component/OurProductCard";
 import {
+  ChampionIcon,
+  CheckmarkBadge02Icon,
+  ContainerTruck02Icon,
+  CustomerServiceIcon,
   MenuCircleIcon,
   PreferenceHorizontalIcon,
   TimelineListIcon,
@@ -96,35 +100,47 @@ function page() {
         <div className="absolute inset-0 bg-lightCream/60 flex flex-col items-center justify-center z-10 "></div>
       </div>
       {/* filter */}
-      <div className="bg-cream">
-        <div className="container mx-auto px-4 py-10 font-poppins flex flex-col md:flex-row justify-between items-center gap-5">
-          <div className="flex justify-between w-full">
-            <div className="flex items-center gap-5">
-              <div className="flex cursor-pointer">
-                <HugeiconsIcon icon={PreferenceHorizontalIcon} className="" />
-                <p className="ml-3">Filter</p>
+      <div className="bg-cream py-6 font-poppins">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2 cursor-pointer hover:opacity-70">
+                <HugeiconsIcon icon={PreferenceHorizontalIcon} />
+                <span className="text-md md:text-[20px]">Filter</span>
               </div>
-              <HugeiconsIcon
-                className="cursor-pointer"
-                fill="black"
-                icon={MenuCircleIcon}
-              />
-              <HugeiconsIcon icon={TimelineListIcon} />
-              <div className="border-r border h-10 "></div>
-              <p>Showing 1 -16 of 32 results</p>
+
+              <div className="flex items-center gap-4">
+                <HugeiconsIcon
+                  className="cursor-pointer  hidden md:block"
+                  fill="black"
+                  icon={MenuCircleIcon}
+                />
+                <HugeiconsIcon
+                  className="cursor-pointer hidden md:block"
+                  icon={TimelineListIcon}
+                />
+              </div>
             </div>
-            <div className="flex justify-between mt-2">
-              <div className="flex gap-10">
-                <p>
-                  Show{" "}
-                  <span className="bg-white p-3 ml-3 text-[#9F9F9F]">16</span>{" "}
-                </p>
-                <p>
-                  Short by{" "}
-                  <span className="bg-white p-3 ml-3 text-[#9F9F9F] pr-10">
-                    Default
-                  </span>{" "}
-                </p>
+            {/* lg divider */}
+            <div className="hidden sm:block h-8 w-[2px] bg-[#9F9F9F] opacity-50"></div>
+
+            <p className="text-md md:text-[16px]">
+              Showing 1 - 16 of 32 results
+            </p>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              <span className="text-md md:text-lg lg:text-[20px]">Show</span>
+              <div className="bg-white px-4 py-3 text-[#9F9F9F] text-sm cursor-pointer">
+                16
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-md md:text-lg lg:text-[20px]">Sort by</span>
+              <div className="bg-white px-6 py-3 text-[#9F9F9F] text-sm min-w-[120px] cursor-pointer">
+                Default
               </div>
             </div>
           </div>
@@ -136,6 +152,150 @@ function page() {
           {products.map((product) => (
             <OurProductCard key={product.id} {...product} />
           ))}
+        </div>
+      </div>
+      {/* buttons */}
+      <div>
+        <div className="flex justify-center items-center gap-5 mb-10">
+          <button className="bg-cream text-black px-4 py-2 rounded-md cursor-pointer hover:bg-darkBrown hover:text-white transition-all duration-300">
+            1
+          </button>
+          <button className="bg-cream text-black px-4 py-2 rounded-md cursor-pointer hover:bg-darkBrown hover:text-white transition-all duration-300">
+            2
+          </button>
+          <button className="bg-cream text-black px-4 py-2 rounded-md cursor-pointer hover:bg-darkBrown hover:text-white transition-all duration-300">
+            3
+          </button>
+          <button className="bg-cream text-black px-4 py-2 rounded-md cursor-pointer hover:bg-darkBrown hover:text-white transition-all duration-300">
+            Next
+          </button>
+        </div>
+      </div>
+      {/* promotion */}
+      <div className="bg-cream py-10">
+        {" "}
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center lg:justify-items-start">
+            {/* Item 1 */}
+            <div className="flex flex-row items-center gap-4">
+              <div className="flex-shrink-0">
+                <div className="md:hidden">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={40}
+                    icon={ChampionIcon}
+                  />
+                </div>
+
+                {/* Icon for Medium/Large Devices (Hidden on small screens) */}
+                <div className="hidden md:block">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={60}
+                    icon={ChampionIcon}
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-lg md:text-[25px] text-[#242424] font-bold leading-tight">
+                  High Quality
+                </h2>
+                <p className="text-[#898989] text-sm md:text-[20px]">
+                  crafted from top materials
+                </p>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="flex flex-row items-center gap-4">
+              <div className="flex-shrink-0">
+                <div className="md:hidden">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={40}
+                    icon={CheckmarkBadge02Icon}
+                  />
+                </div>
+
+                {/* Icon for Medium/Large Devices (Hidden on small screens) */}
+                <div className="hidden md:block">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={60}
+                    icon={CheckmarkBadge02Icon}
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-lg md:text-[25px] text-[#242424] font-bold leading-tight">
+                  Warranty Protection
+                </h2>
+                <p className="text-[#898989] text-sm md:text-[20px]">
+                  over 2 years
+                </p>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="flex flex-row items-center gap-4">
+              <div className="flex-shrink-0">
+                <div className="md:hidden">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={40}
+                    icon={ContainerTruck02Icon}
+                  />
+                </div>
+
+                {/* Icon for Medium/Large Devices (Hidden on small screens) */}
+                <div className="hidden md:block">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={60}
+                    icon={ContainerTruck02Icon}
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-lg md:text-[25px] text-[#242424] font-bold leading-tight">
+                  Free Shipping
+                </h2>
+                <p className="text-[#898989] text-sm md:text-[20px]">
+                  order over 150$
+                </p>
+              </div>
+            </div>
+
+            {/* Item 4 */}
+            <div className="flex flex-row items-center gap-4">
+              <div className="flex-shrink-0">
+                <div className="md:hidden">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={40}
+                    icon={CustomerServiceIcon}
+                  />
+                </div>
+
+                {/* Icon for Medium/Large Devices (Hidden on small screens) */}
+                <div className="hidden md:block">
+                  <HugeiconsIcon
+                    color="#242424"
+                    size={60}
+                    icon={CustomerServiceIcon}
+                  />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-lg md:text-[25px] text-[#242424] font-bold leading-tight">
+                  24/7 Support
+                </h2>
+                <p className="text-[#898989] text-sm md:text-[20px]">
+                  Dedicated support
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
