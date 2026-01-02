@@ -34,7 +34,7 @@ function Navbar() {
           <li>Contact</li>
         </ul>
 
-        <ul className="hidden md:flex gap-10">
+        <ul className="hidden md:flex md:gap-5 lg:gap-10">
           <li>
             <HugeiconsIcon icon={UserWarning03Icon} />
           </li>

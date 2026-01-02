@@ -28,7 +28,7 @@ function RoomInspiration() {
                 <img
                   src="/images/room1.png"
                   alt="Room"
-                  className="w-full h-auto object-cover"
+                  className="w-full object-cover h-[550px]"
                 />
 
                 <div className="absolute bottom-6 left-6 bg-[#FFFFFFB8] backdrop-blur-sm p-6 max-w-[60%] shadow-sm">
@@ -49,7 +49,7 @@ function RoomInspiration() {
             </div>
             <div className="relative">
               <div className="flex flex-col gap-3">
-                <img src="/images/room2.png" alt="" className="h-[550px]" />
+                <img src="/images/room2.png" alt="" className="h-[500px]" />
                 <div className="flex gap-10">
                   <img src="/images/active.png" alt="" />
                 </div>
