@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="absolute flex justify-between items-center p-5 w-full h-[100px] bg-white z-50">
+      <nav className="fixed flex justify-between items-center p-5 w-full h-[100px] bg-white z-50">
         <div className="flex cursor-pointer">
           <img
             src="/images/logo.png"
