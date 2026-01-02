@@ -10,6 +10,7 @@ import {
   Menu07Icon,
   Cancel01Icon,
 } from "@hugeicons/core-free-icons";
+import Link from "next/link";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +29,12 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 text-[16px]">
-          <li>Home</li>
-          <li>Shop</li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/shop">Shop</Link>
+          </li>
           <li>About</li>
           <li>Contact</li>
         </ul>
@@ -116,10 +121,19 @@ function Navbar() {
                   <div className="relative mt-6 flex-1 px-4 sm:px-6 text-darkBrown">
                     {/*  content  */}
                     <ul className="flex flex-col gap-6  text-[20px] text-center mt-10">
-                      <li>Home</li>
-                      <li>Shop</li>
-                      <li>About</li>
-                      <li>Contact</li>
+                      <li>
+                        {" "}
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/shop">Shop</Link>
+                      </li>
+                      <li>
+                        <Link href="/about">About</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Contact</Link>
+                      </li>
                     </ul>
                     <ul className="flex gap-10 mt-20 justify-center ">
                       <li>

@@ -36,3 +36,9 @@ ul li{
   background-size: cover;
   background-position: center;
 }
+
+.shop-bg{
+  background-image: url("../../public/images/shop-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
