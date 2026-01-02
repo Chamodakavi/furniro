@@ -1,3 +1,8 @@
+import {
+  ArrowRight01Icon,
+  CircleArrowRight01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import React from "react";
 
 function RoomInspiration() {
@@ -42,7 +47,17 @@ function RoomInspiration() {
                 </div>
               </div>
             </div>
-            <div>3</div>
+            <div className="relative">
+              <div className="flex flex-col gap-3">
+                <img src="/images/room2.png" alt="" className="h-[550px]" />
+                <div className="flex gap-10">
+                  <img src="/images/active.png" alt="" />
+                </div>
+              </div>
+              <div className="absolute top-60 right-5 flex items-center justify-center text-darkBrown bg-white rounded-[50%] cursor-pointer w-10 h-10 shadow-md hover:bg-darkBrown hover:text-white">
+                <HugeiconsIcon size={30} icon={ArrowRight01Icon} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

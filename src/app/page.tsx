@@ -4,6 +4,7 @@ import Hero from "@/component/sections/Hero";
 import RangeSec from "@/component/sections/RangeSec";
 import OurProducts from "@/component/sections/OurProducts";
 import RoomInspiration from "@/component/sections/RoomInspiration";
+import Share from "@/component/sections/Share";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <RangeSec />
       <OurProducts />
       <RoomInspiration />
+      <Share />
     </>
   );
 }
