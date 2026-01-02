@@ -16,7 +16,7 @@ function Footer() {
             </p>
           </div>
           {/* Links */}
-          <div className="mt-10 md:mt-0">
+          <div className="mt-10 md:mt-0 mx-0 md:mx-10 lg:mx-0">
             <p className="text-md md:text-[16px] text-[#9F9F9F]">Links</p>
             <ul>
               <li className="my-5">
@@ -34,7 +34,7 @@ function Footer() {
             </ul>
           </div>
           {/* help */}
-          <div className="mt-10 md:mt-0">
+          <div className="mt-10 md:mt-0 mx-0 md:mx-10 lg:mx-0">
             <p className="text-md md:text-[16px] text-[#9F9F9F] ">Help</p>
             <ul>
               <li className="my-5">
@@ -55,7 +55,7 @@ function Footer() {
             </p>
             <div className="flex flex-row gap-5">
               <input
-                className="outline-none border-b bg-transparent placeholder:text-gray-400"
+                className="outline-none border-b bg-transparent placeholder:text-gray-400 w-1/2 lg:w-full"
                 type="email"
                 placeholder="Enter Your Email Address"
                 // autoComplete="off"
