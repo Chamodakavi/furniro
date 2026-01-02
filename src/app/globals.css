@@ -1,26 +1,38 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+
+  --color-cream: oklch(0.9693 0.0248 75.28);
+  --color-darkBrown: oklch(0.6699 0.1199 83.83); /*  #b88e2f */
+  --color-lightBlack: oklch(0.3211 0 0); /* #333333 */
+  --color-lightWhite: oklch(0.97 0.0029 264.54);/* #f4f5f7 */
+  --color-lightCream: oklch(0.9808 0.0079 73.75);/* #fcf8f3 */
+    
+
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+  --font-poppins: "Poppins", system-ui, sans-serif;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body{
+  font-family: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+ul li{
+  cursor: pointer;
+  font-weight: bold;
+  &:hover{
+    color: var(--color-darkBrown);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.hero-bg{
+  background-image: url("../../public/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
